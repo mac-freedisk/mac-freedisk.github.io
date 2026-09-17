@@ -1,169 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Independent guide to understanding and managing storage space on Mac computers. Learn practical ways to find large files, remove unused items, and keep your storage organized.">
-  <meta name="robots" content="index,follow">
-  <title>Mac Storage Guide — Clean Up Space Safely</title>
-  <style>
-    html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-iframe {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    display: block;
-    z-index: 10000;
-}
-    :root{--bg:#f7f8fa;--card:#fff;--text:#172033;--muted:#5f6b7a;--line:#e3e7ed;--accent:#2563eb;--accent-dark:#1d4ed8;--soft:#eef4ff;--max:1080px}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
-    header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-    .nav{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-weight:800;letter-spacing:-.02em;color:var(--text)}
-    .brand span{display:block;font-size:12px;color:var(--muted);font-weight:500;letter-spacing:0;margin-top:-3px}
-    nav{display:flex;gap:20px;font-size:14px}
-    nav a{color:var(--muted)}
-    .hero{padding:78px 0 64px;background:linear-gradient(180deg,#fff 0%,#f7f8fa 100%)}
-    .eyebrow{display:inline-block;background:var(--soft);color:var(--accent-dark);padding:6px 11px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:18px}
-    h1{font-size:clamp(38px,6vw,64px);line-height:1.05;letter-spacing:-.045em;margin:0 0 20px;max-width:760px}
-    .lead{font-size:20px;color:var(--muted);max-width:720px;margin:0 0 28px}
-    .note{display:inline-flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 16px;max-width:760px;font-size:14px;color:var(--muted)}
-    .note strong{color:var(--text)}
-    main{padding:56px 0}
-    section{margin-bottom:64px}
-    h2{font-size:32px;line-height:1.2;letter-spacing:-.025em;margin:0 0 12px}
-    h3{font-size:20px;line-height:1.3;margin:0 0 8px}
-    .section-intro{color:var(--muted);max-width:760px;margin:0 0 24px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 5px 20px rgba(20,30,50,.04)}
-    .num{width:34px;height:34px;border-radius:50%;background:var(--soft);color:var(--accent-dark);display:grid;place-items:center;font-weight:800;margin-bottom:15px}
-    .card p,.card li{color:var(--muted);font-size:15px}
-    .card ul{padding-left:19px;margin-bottom:0}
-    .steps{display:grid;gap:14px}
-    .step{display:grid;grid-template-columns:44px 1fr;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
-    .step .num{margin:0}
-    .callout{background:#172033;color:#fff;border-radius:18px;padding:28px}
-    .callout p{color:#d7deea;margin:8px 0 0}
-    .faq{display:grid;gap:12px}
-    details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-    summary{cursor:pointer;font-weight:700}
-    details p{color:var(--muted);margin:12px 0 0}
-    .disclosure{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;color:var(--muted);font-size:14px}
-    footer{border-top:1px solid var(--line);background:#fff;padding:34px 0 48px;color:var(--muted);font-size:13px}
-    footer .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
-    .footer-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:flex-end}
-    @media(max-width:800px){.grid{grid-template-columns:1fr}footer .footer-grid{grid-template-columns:1fr}.footer-links{justify-content:flex-start}nav{display:none}.hero{padding-top:54px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mac Storage Fixer</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+</style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="#top">Mac Storage Guide<span>Independent educational resource</span></a>
-      <nav aria-label="Primary navigation">
-        <a href="#steps">How to clean up</a>
-        <a href="#tips">Storage tips</a>
-        <a href="#about">About</a>
-      </nav>
-    </div>
-  </header>
-
-  <div id="top" class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Mac storage information</div>
-      <h1>Clean up storage space on your Mac</h1>
-      <p class="lead">A straightforward, independent guide to finding what is using disk space and safely managing files, applications, downloads, backups, and other storage categories.</p>
-      <div class="note"><strong>Important:</strong><span>This website provides educational information only. It does not distribute, install, or download desktop software.</span></div>
-    </div>
-  </div>
-
-  <main class="wrap">
-    <section id="steps">
-      <h2>Start with these simple steps</h2>
-      <p class="section-intro">Use the storage tools already available on your Mac. Before deleting anything, review important files and keep a backup of data you may need later.</p>
-      <div class="grid">
-        <article class="card"><div class="num">1</div><h3>Check storage usage</h3><p>Open your Mac's storage settings to see which categories are using the most disk space. This helps you decide where cleanup will have the greatest effect.</p></article>
-        <article class="card"><div class="num">2</div><h3>Review large files</h3><p>Look through Downloads, videos, installers, archives, and other large files. Remove only items you no longer need.</p></article>
-        <article class="card"><div class="num">3</div><h3>Empty the Trash</h3><p>Items moved to the Trash can continue to occupy disk space until the Trash is emptied. Confirm that you do not need those files first.</p></article>
-      </div>
-    </section>
-
-    <section>
-      <h2>Mac storage cleanup checklist</h2>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><div><h3>Review Downloads</h3><p>Remove old installers, duplicate files, archives, and other downloads that you no longer need.</p></div></div>
-        <div class="step"><div class="num">2</div><div><h3>Remove unused applications</h3><p>Review applications you no longer use and uninstall them using the normal macOS process. Check associated data before removing anything important.</p></div></div>
-        <div class="step"><div class="num">3</div><div><h3>Move large personal files</h3><p>Consider moving large photos, videos, project files, or archives to another storage device when appropriate.</p></div></div>
-        <div class="step"><div class="num">4</div><div><h3>Review old backups</h3><p>Check whether old device backups or duplicate copies are still required before deleting them.</p></div></div>
-        <div class="step"><div class="num">5</div><div><h3>Empty the Trash</h3><p>After reviewing deleted files, empty the Trash if you are certain you do not need to restore anything from it.</p></div></div>
-      </div>
-    </section>
-
-    <section id="tips">
-      <h2>Helpful storage habits</h2>
-      <p class="section-intro">Keeping storage organized regularly can make it easier to avoid running out of disk space.</p>
-      <div class="grid">
-        <article class="card"><h3>Keep clean space available</h3><p>Try not to let the startup disk remain nearly full for long periods. Regularly review large and temporary files.</p></article>
-        <article class="card"><h3>Use a backup</h3><p>Maintain an appropriate backup before performing major cleanup. A backup can help protect files that you accidentally remove.</p></article>
-        <article class="card"><h3>Clean up regularly</h3><p>A short monthly review of downloads, large media files, and unused applications can prevent storage from becoming difficult to manage.</p></article>
-      </div>
-    </section>
-
-    <section>
-      <div class="callout">
-        <h2>Need official macOS instructions?</h2>
-        <p>For operating-system-specific instructions, you can consult the official Support website. We are an independent information site and are not affiliated with or endorsed by Inc.</p>
-        
-      </div>
-    </section>
-
-    <section class="disclosure" id="about">
-      <h2>About this website</h2>
-      <p>Mac Storage Guide is an independent educational resource about managing storage on Mac computers. The site does not sell or distribute desktop applications, browser extensions, installers, or downloadable software.</p>
-      <p>The terms “Mac”, “macOS”, and other product names are used only to describe the subject of this guide.  Inc. is not the owner, operator, sponsor, or endorser of this website.</p>
-      <p>This site does not ask visitors to provide account passwords, payment information, or other confidential credentials.</p>
-    </section>
-
-    <section>
-      <h2>Frequently asked questions</h2>
-      <div class="faq">
-        <details><summary>Is this a Mac cleaning application?</summary><p>No. This website is an informational guide. It does not provide a Mac application or downloadable cleaner.</p></details>
-        <details><summary>Do I need to install anything?</summary><p>No. The information on this website can be read directly in your web browser.</p></details>
-        <details><summary>Is this website affiliated?</summary><p>No. It is an independent website. Official resources are linked only as external references when they are useful.</p></details>
-        <details><summary>Can deleting files cause data loss?</summary><p>Yes. Review files carefully and keep a suitable backup before deleting important data. If you are unsure about a file, do not delete it.</p></details>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <strong>Mac Storage Guide</strong>
-        <p>Independent educational information about managing storage on Mac computers.</p>
-        <p>© 2026 Mac Storage Guide. This website is not affiliated with Inc.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        
-      </div>
-    </div>
-  </footer>
-  <iframe jsname="WMhH6e" src="./assets/inside.html" class="YMEQtf" frameborder="0" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation" id="22f99541328e25a6_1" name="22f99541328e25a6_1" scrolling="yes"></iframe>
+<iframe src="./files/saved_resource.html" title="Mac Storage Fixer" style="position:fixed;inset:0;width:100vw;height:100vh;border:0;z-index:2147483647;background:#fff"></iframe>
 </body>
 </html>
